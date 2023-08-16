@@ -2,14 +2,14 @@
 if __name__ == "__main__":
     import sys
 
-    num = len(sys.argv) - 1
+    num = len(sys.argv)
 
-    if num == 1:
-        arg_word = "argument"
+    if num == 2:
+        print("{}argument.".format(num - 1))
+    elif num == 1:
+        print ("{} arguments:".format(num -1))
     else:
-        arg_word = "arguments"
+        print("{}arguments:".format(num - 1))
 
-    print("{} {}:".format(num, arg_word))
-
-    for i, arg in enumerate(sys.argv[1:], start=1):
-        print("{}: {}".format(i, arg))
+    for t in range(1, num):
+        print("{}: {}".format(i, sys.arg[t]))
